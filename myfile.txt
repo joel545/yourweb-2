@@ -2,6 +2,13 @@ hello
 hi
 hi-2
 hi-3
+-- mybranch
 this myfile from git - mybranch
 this myfile from git - mybranch2
 this myfile from after mybranch push
+=======
+myfile from github-main
+main
+ 
+ 
+ 
