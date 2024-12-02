@@ -1,0 +1,13 @@
+name: Open NotePad
+on:
+  push:
+    branches: 
+      -  main
+  workflow_dispatch:  #可以手動觸發
+jobs:  
+  open-notepad:   
+    runs-on: windows-latest  #使用最新的win 執行環境
+    steps:    
+      - name: 開啟記事本
+        run: Start-Process "notepad.exe"  #啟動記事
+        shell:  pwsh #使用PowerShell shell
