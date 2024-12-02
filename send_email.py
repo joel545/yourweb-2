@@ -4,8 +4,8 @@ from sendgrid.helpers.mail import Mail
 
 def send_email():
     message = Mail(
-        from_email='python.hsu@gmail.com',  # 替換為您的發件人電子郵件
-        to_emails='python.hsu@gmail.com',  # 替換為收件人電子郵件
+        from_email='joell848@gmail.com',  # 替換為您的發件人電子郵件
+        to_emails='joell848@gmail.com',  # 替換為收件人電子郵件
         subject='Hello from SendGrid',
         plain_text_content='This is a test email sent from GitHub Actions using SendGrid.',
         html_content='<strong>This is a test email sent from GitHub Actions using SendGrid.</strong>'
