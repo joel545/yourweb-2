@@ -1,0 +1,29 @@
+name: Send Email via SendGrid
+
+on:
+  push:
+    branches:
+      - main  # 當推送到 main 分支時觸發
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'  # 可以根據需要選擇 Python 版本
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Send email via SendGrid
+      env:
+        SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}  # 從 GitHub Secrets 獲取 SendGrid API 金鑰
+      run: |
+        python send_email.py
